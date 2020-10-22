@@ -1,7 +1,13 @@
 <?php 
 function carrega_estilos(){
   wp_enqueue_style('estilos-pai', get_template_directory_uri() . '/style.css');
+  // wp_enqueue_style('estilos-filho', '"https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', array('jquery'),'4.0.0',true);
 
+  wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700|Seaweed+Script' );
+
+
+wp_enqueue_script('jquery', get_template_directory_uri().'/js/query-3.4.1.min.js', array('jquery'),'4.0.0', true);
+// <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 }
 add_action('wp_enqueue_scripts','carrega_estilos');
  ?>
